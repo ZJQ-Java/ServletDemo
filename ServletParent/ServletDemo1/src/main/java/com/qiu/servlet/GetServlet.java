@@ -6,8 +6,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import java.util.Optional;
+import java.util.Properties;
 
 public class GetServlet extends HttpServlet {
     @Override
@@ -17,7 +19,12 @@ public class GetServlet extends HttpServlet {
         value = Optional.ofNullable(value).orElse(servletContext.getInitParameter("url"));
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
+        InputStream resourceAsStream = servletContext.getClassLoader().getResourceAsStream("prop.properties");
+        Properties p = new Properties();
+        p.load(resourceAsStream);
+        String property = p.getProperty("servletValue");
         out.println("<h1>" + value + "<h1>");
+        out.println("<h1>" + property + "<h1>");
 
     }
 
