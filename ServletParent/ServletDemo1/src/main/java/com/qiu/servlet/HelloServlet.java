@@ -1,4 +1,4 @@
-package com.qiu.servlet.HelloServlet;
+package com.qiu.servlet;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class helloServlet extends HttpServlet {
+public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
