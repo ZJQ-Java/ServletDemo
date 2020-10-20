@@ -19,7 +19,7 @@ public class GetServlet extends HttpServlet {
         value = Optional.ofNullable(value).orElse(servletContext.getInitParameter("url"));
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
-        InputStream resourceAsStream = servletContext.getClassLoader().getResourceAsStream("prop.properties");
+        InputStream resourceAsStream     = servletContext.getClassLoader().getResourceAsStream("prop.properties");
         Properties p = new Properties();
         p.load(resourceAsStream);
         String property = p.getProperty("servletValue");
