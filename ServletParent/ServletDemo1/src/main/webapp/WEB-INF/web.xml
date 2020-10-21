@@ -58,6 +58,24 @@
         <url-pattern>/c1</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>sd</servlet-name>
+        <servlet-class>com.qiu.servlet.SessionRemoveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sd</servlet-name>
+        <url-pattern>/sd</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ss</servlet-name>
+        <servlet-class>com.qiu.servlet.SessionSetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ss</servlet-name>
+        <url-pattern>/ss</url-pattern>
+    </servlet-mapping>
+
     <context-param>
         <param-name>url</param-name>
         <param-value>jdbc:mysql://localhost:3306/mybatis</param-value>

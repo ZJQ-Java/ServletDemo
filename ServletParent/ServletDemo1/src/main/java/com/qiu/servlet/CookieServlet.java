@@ -25,16 +25,17 @@ public class CookieServlet extends HttpServlet {
         } else {
             for (Cookie cookie : cookies) {
                 if (cookie.getName().equals("userName")) {
-
                     String decode = URLDecoder.decode(cookie.getValue(), "UTF-8");
                     writer.println("userName -> value= " + decode);
-                    cookie.setValue(URLEncoder.encode("张金秋"+getRandom(), "UTF-8") );
-                    resp.addCookie(cookie);
+//                    cookie.setValue(URLEncoder.encode("张金秋"+getRandom(), "UTF-8") );
+//                    resp.addCookie(cookie);
+
                     return;
                 }
             }
         }
         Cookie cookie = new Cookie("userName", URLEncoder.encode("张金秋", "UTF-8") );
+//        cookie.setMaxAge(1);
         resp.addCookie(cookie);
     }
 
