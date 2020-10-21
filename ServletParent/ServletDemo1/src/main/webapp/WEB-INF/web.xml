@@ -40,6 +40,24 @@
         <url-pattern>/forward</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>download</servlet-name>
+        <servlet-class>com.qiu.servlet.DownloadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>download</servlet-name>
+        <url-pattern>/download</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>c1</servlet-name>
+        <servlet-class>com.qiu.servlet.CookieServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>c1</servlet-name>
+        <url-pattern>/c1</url-pattern>
+    </servlet-mapping>
+
     <context-param>
         <param-name>url</param-name>
         <param-value>jdbc:mysql://localhost:3306/mybatis</param-value>
