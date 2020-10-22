@@ -13,6 +13,25 @@
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>hello</servlet-name>
+        <url-pattern>/filter/hello</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>filter</filter-name>
+        <filter-class>com.qiu.filter.FilterServlet</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>filter</filter-name>
+        <url-pattern>/filter/*</url-pattern>
+    </filter-mapping>
+
+
+    <listener>
+        <listener-class>com.qiu.listen.ListenServlet</listener-class>
+    </listener>
+
     <servlet>
         <servlet-name>servletContent</servlet-name>
         <servlet-class>com.qiu.servlet.GetServlet</servlet-class>
@@ -22,14 +41,14 @@
         <url-pattern>/getServletContent</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>servletError</servlet-name>
-        <servlet-class>com.qiu.servlet.ErrorServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>servletError</servlet-name>
-        <url-pattern>/*</url-pattern>
-    </servlet-mapping>
+    <!--    <servlet>-->
+    <!--        <servlet-name>servletError</servlet-name>-->
+    <!--        <servlet-class>com.qiu.servlet.ErrorServlet</servlet-class>-->
+    <!--    </servlet>-->
+    <!--    <servlet-mapping>-->
+    <!--        <servlet-name>servletError</servlet-name>-->
+    <!--        <url-pattern>/*</url-pattern>-->
+    <!--    </servlet-mapping>-->
 
     <servlet>
         <servlet-name>forward</servlet-name>
