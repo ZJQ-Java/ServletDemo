@@ -5,12 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.qiu</groupId>
-    <artifactId>ServletParent</artifactId>
+    <artifactId>ServletDemo</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>ServletDemo1</module>
-    </modules>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->

@@ -10,7 +10,9 @@ public class ForwardServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("forward come in");
+        //重定向
         resp.sendRedirect("/hello");
+        //转发
 //        this.getServletContext().getRequestDispatcher("/hello").forward(req, resp);
     }
 

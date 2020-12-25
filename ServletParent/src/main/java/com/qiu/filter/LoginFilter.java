@@ -1,6 +1,5 @@
 package com.qiu.filter;
 
-import com.qiu.constants.ConstantServlet;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -23,7 +22,7 @@ public class LoginFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpSession session = req.getSession();
         HttpServletResponse resp = (HttpServletResponse) response;
-        String attribute = (String) session.getServletContext().getAttribute(ConstantServlet.USER_SESSION);
+        String attribute = (String) session.getServletContext().getAttribute("USER_SESSION");
         if (attribute == null ) {
             resp.sendRedirect("/login.jsp");
         }
